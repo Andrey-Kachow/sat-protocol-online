@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Avatar Editor
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/avatar_editor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    {% include 'includes/context_injection.html' %}
+    <script src="{{ url_for('static', filename='js/semaphore.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/avatar_form.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/meta_avatar.js') }}"></script>
+  </head>
+
+  <body>
+    <div class="avatar-main-content">
+      <div id="avatar-inactive-section">
+        <iframe id="editor_iframe" class="avatar-sdk-iframe" src="https://metaperson.avatarsdk.com/iframe.html"
+          allow="fullscreen" frameborder="0">
+        </iframe>
+        <div id="avatar-editor-left-pannel">
+          <div id="avatar-editor-exit" class="avatar-editor-ui-container">
+            <button id="avatar-editor-exit-button" class="avatar-editor-exit">
+              Quit
+              <!-- Выйти -->
+            </button>
+          </div>
+          <div id="avatar-editor-restart" class="avatar-editor-ui-container">
+            <button id="avatar-editor-restart-button" class="avatar-editor-restart">
+              Restart
+              <!-- Начать заново -->
+            </button>
+          </div>
+          <div id="avatar-editor-description" class="avatar-editor-ui-container">
+            <p>
+              Use MetaPerson Editor to create your Childhood-Self.
+              Press "Quit" to exit to the Home page without saving.
+              Press "Save & Play" to proceed to the game.
+            </p>
+            <!-- <p> -->
+              <!-- Используйте редактор Metaperson для создания и изменения
+              образа ребенка. Когда будете готовы, нажмте "Продолжить",
+              чтобы перейти в интерактивное приложение. -->
+            <!-- </p> -->
+          </div>
+          <div id="avatar-editor-play" class="avatar-editor-ui-container">
+            <button id="avatar-editor-play-button" class="avatar-editor-save-and-continue">
+              Save & Play
+              <!-- Продолжить -->
+            </button>
+          </div>
+        </div>
+        <div class="avatar-inactive-overlay" style="display: block;">
+          <div id="avatar-overlay-shadow" class="avatar-overlay-inset-shadow">
+            <div id="avatar-notice-label">
+              Use the panel bellow to upload yout childhood photo and select gender
+              <!-- Загрузите фотографию и укажите пол ребенка на панели ниже. -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="avatar-generation-form" class="avatar-active-highlight">
+        <label for="avatar-image-input">
+          Select your childhood photo
+          <!-- Выберите фото ребенка -->
+        </label>
+        <input type="file" id="avatar-image-input" accept="image/*" required>
+        <label for="avatar-gender-select">
+          Specify your gender as a child:
+          <!-- Укажите пол ребенка на фото: -->
+        </label>
+        <select id="avatar-gender-select" name="gender">
+          <option value="">
+            --Please choose an option--
+            <!-- --Пожалуйста выберите-- -->
+          </option>
+          <option value="male">
+            Male
+            <!-- Мальчик -->
+          </option>
+          <option value="female">
+            Female
+            <!-- Девочка -->
+          </option>
+        </select>
+        <button id="avatar-generation-form-submit" type="submit">
+          Generate Childhood-self
+          <!-- Запустить создание ребенка -->
+        </button>
+      </form>
+    </div>
+    {# 
+      {% include 'includes/debug/show_session.html' %} 
+    #}
+  </body>
+
+</html>

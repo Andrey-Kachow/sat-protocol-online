@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sign_in.css') }}">
+<div class="signin-dialog-root">
+  <div class="base-align-center signin-title">
+    <div class="base-centroid">
+      Please Sign in before proceeding to the Interactive Session
+    </div>
+  </div>
+  <div class="signin-options">
+    <div class="signin-option">
+      <p>
+        Create a profile and track your progress.
+      </p>
+      <button id="signin-btn-account" class="base-fancy-btn base-fancy-btn-default" disabled>
+        Sign in to Account
+      </button>
+      <p>
+        We value your privacy.
+      </p>
+    </div>
+    <div class="signin-option">
+      <p>
+        Jump straight into game.
+      </p>
+      <button id="signin-btn-guest" class="base-fancy-btn base-fancy-btn-default" disabled>
+        Continue as Guest
+      </button>
+      <p>
+        Your progress or details will not be saved after a game session.
+      </p>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/sign_in.js') }}"></script>

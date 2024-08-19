@@ -1,0 +1,27 @@
+{% extends 'admin/admin_base.html' %}
+
+{% block title %}
+SAT - Admin Sign In
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="base-welcome-block">
+  <h2 class="base-welcome-title">
+    Moderator LOG IN
+  </h2>
+  {% include 'includes/auth_warnings.html' %}
+</div>
+<form method="post">
+  <label for="username">Username</label>
+  <input name="username" id="username" required>
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" required>
+  <input type="submit" value="Log In">
+</form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

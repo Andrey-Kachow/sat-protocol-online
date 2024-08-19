@@ -1,0 +1,17 @@
+# No need to change this unless you want custom admin panel username/password.
+export SAT_PROTOCOL_ONLINE_ADMIN_PASSWORD='something_very_secure'
+export SAT_PROTOCOL_ONLINE_ADMIN_USERNAME='something_original'
+
+
+# A pair of API credentials for Metaperson Creator Authorisation
+export AVATAR_SDK_DEV_CLIENT_ID='ask Andrey Popov at andr10xp@gmail.com or professor Abbas Edalat for this informaiton'
+export AVATAR_SDK_DEV_SECRET_KEY='ask Andrey Popov at andr10xp@gmail.com or professor Abbas Edalat for this informaiton'
+
+
+# Please, replace '</path/to/the/repository>' with the path where the repository was cloned.
+export FLASK_APP='</path/to/the/repository>/src/main'
+
+# No need to change this
+export FLASK_ENV='production'
+export FLASK_APP_SECRET_KEY='some_secret_key_for_tests'
+

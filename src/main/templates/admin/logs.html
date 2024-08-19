@@ -1,0 +1,27 @@
+{% extends 'admin/admin_base.html' %}
+
+{% block title %}
+SAT - Admin Sign In
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="base-welcome-block">
+  <h2 class="base-welcome-title">
+    LOGS
+  </h2>
+  {% include 'includes/auth_warnings.html' %}
+</div>
+<div class="admin-logs-wrapper">
+  <code>
+    {% for log in logs %}
+    <p>{{ log }}</p>
+    {% endfor %}
+  </code>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

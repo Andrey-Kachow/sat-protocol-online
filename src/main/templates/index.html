@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<meta property="og:url" content="http://satprotocol.online" />
+<meta property="og:title" content="SAT PROTOCOL" />
+<meta name="author" content="Andrey Popov" />
+
+{% endblock %}
+
+{% block title %}
+SAT Protocol Online
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block header %}
+{% include 'includes/welcome.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- {% if logs %} <ul> {% for log in logs %} <li>{{ log }}</li> {% endfor %} </ul> {% endif %} -->
+<a href="/avatar">
+  <button class="base-fancy-btn idx-welcome-button base-pleasant-green">
+    <!-- Начать Тест &#9654 -->
+    Begin Trials &#9654
+  </button>
+</a>
+{% if global_dict.DEBUG_MODE_ON %}
+<h2>
+  RESOURCES
+</h2>
+<p>
+  <a href="/instance/webglbuilds/b_june_anims_and_Ggrl/index.html">
+    Play the build with Animated Generic Girl switchable
+  </a>
+</p>
+<p>
+  <a href="/instance/webglbuilds/b_may_30_anims/index.html">
+    Play the build with Mixamo Animations
+  </a>
+</p>
+<p>
+  <a href="/instance/webglbuilds/b_may_30_morning/index.html">
+    Play the build that attempts fullscreen
+  </a>
+</p>
+<p>
+  <a href="/instance/webglbuilds/b_may_30_menimal/index.html">
+    Play the Fresh build that redirects to Auth Login
+  </a>
+</p>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

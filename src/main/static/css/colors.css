@@ -1,0 +1,29 @@
+
+:root {
+
+  /* Original Pallete
+  */
+  --lapis-lazuli: #335982ff;
+  --cerulean: #447C94ff;
+  --indigo-dye: #2F4A69ff;
+  --white: #FFFFFFff;
+  --raisin-black: #1E202Cff;
+
+
+  --primary: rgb(51, 89, 130);
+  --secondary: rgb(68, 124, 148);
+  --extra-shade: rgb(79, 150, 232);
+  --link: rgb(155, 198, 246);
+  --link-active: rgb(155, 246, 223);
+  --text-color: rgb(203, 204, 207);
+  --dark: rgb(30, 32, 44);
+  --dark-semi: rgba(30, 32, 44, 0.97);
+  --dark-but-not-too-much: rgb(34, 38, 57);
+  --text-bg: rgb(30, 32, 44);
+
+  --unity-loading-vibe: #231f20;
+
+  /* Debug...
+  */
+  --dark-semi-but-can-see-through: rgba(30, 32, 44, 0.4);
+}

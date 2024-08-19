@@ -1,0 +1,8 @@
+<div class="base-welcome-block">
+  <h2 class="base-welcome-title">
+    {% if session.user_id %}
+    Hi, {{ g.user.username }}
+    {% endif %}
+    Welcome to the SAT Protocol Online Platform!
+  </h2>
+</div>

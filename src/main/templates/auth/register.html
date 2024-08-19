@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SAT - Register
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+{% block header %}
+<div class="base-welcome-block">
+  <h2 class="base-welcome-title">
+    Registration
+  </h2>
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" required>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+    <input type="submit" value="Register">
+    {% include 'includes/auth_warnings.html' %}
+  </form>
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Begin your journey towards the better mental health with SAT protocol</h1>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

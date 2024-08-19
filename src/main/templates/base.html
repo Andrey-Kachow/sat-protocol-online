@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+    {% endblock %}
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='flaskr_supplement.css') }}"> -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    
+    {% include 'includes/context_injection.html' %}
+    {% block style %}{% endblock %}
+    {% block script %}{% endblock %}
+  </head>
+
+  <body>
+    <header>
+      {% block header %}
+      {% endblock %}
+    </header>
+    <nav>
+      <a href="/">
+        <div class="base-title-holder">
+          <h1>SAT PROTOCOL</h1>
+        </div>
+      </a>
+      <a href="/about">
+        <div class="base-title-holder">
+          <h1>ABOUT</h1>
+        </div>
+      </a>
+      <a href="/exercises">
+        <div class="base-title-holder">
+          <h1>EXERCISES</h1>
+        </div>
+      </a>
+      <a href="/avatar">
+        <div class="base-title-holder">
+          <h1>AVATAR EDITOR</h1>
+        </div>
+      </a>
+      {% if g.user %}
+      <a href="{{ url_for('auth.logout') }}">
+        <div class="base-title-holder">
+          <h1>LOG OUT</h1>
+        </div>
+      </a>
+      <a href="{{ url_for('profile', username=g.user.username) }}">
+        <div class="base-title-holder">
+          <h1>
+            <svg height="1em" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 13 16h-2a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 12 21Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+          </h1>
+        </div>
+      </a>
+      {% else %}
+      <a href="{{ url_for('auth.register') }}">
+        <div class="base-title-holder">
+          <h1>REGISTER</h1>
+        </div>
+      </a>
+      <a href="{{ url_for('auth.login') }}">
+        <div class="base-title-holder">
+          <h1>LOGIN</h1>
+        </div>
+      </a>
+      {% endif %}
+    </nav>
+    <div class="base-content-wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer>
+      {% block footer %}
+      {% endblock %}
+    </footer>
+    <!-- {% include 'includes/debug/show_session.html' %}  -->
+    {# 
+    #}
+  </body>
+
+</html> 

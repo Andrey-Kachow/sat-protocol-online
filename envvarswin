@@ -1,0 +1,17 @@
+# No need to change this unless you want custom admin panel username/password.
+SET SAT_PROTOCOL_ONLINE_ADMIN_PASSWORD='something_very_secure'
+SET SAT_PROTOCOL_ONLINE_ADMIN_USERNAME='something_original'
+
+
+# A pair of API credentials for Metaperson Creator Authorisation
+SET AVATAR_SDK_DEV_CLIENT_ID='ask Andrey Popov at andr10xp@gmail.com or professor Abbas Edalat for this informaiton'
+SET AVATAR_SDK_DEV_SECRET_KEY='ask Andrey Popov at andr10xp@gmail.com or professor Abbas Edalat for this informaiton'
+
+
+# Please, replace '.' with the path where the repository was cloned.
+SET FLASK_APP='./src/main'
+
+# No need to change this
+SET FLASK_ENV='production'
+SET FLASK_APP_SECRET_KEY='some_secret_key_for_tests'
+

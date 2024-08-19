@@ -1,0 +1,42 @@
+{% extends 'admin/admin_base.html' %}
+
+{% block title %}
+SAT - Admin Sign In
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="base-welcome-block">
+  <h2 class="base-welcome-title">
+    DASHBOARD
+  </h2>
+  {% include 'includes/auth_warnings.html' %}
+</div>
+<div class="admin-users-list">
+  <table style="width:100%" class="admin-blue-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>PlayerUID</th>
+        <th>Password Hash</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.playeruid }}</td>
+        <td>{{ user.password }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

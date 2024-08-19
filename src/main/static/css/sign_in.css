@@ -1,0 +1,60 @@
+.signin-dialog-root {
+  color: rgb(239, 240, 247);
+  position: fixed;
+  width: 90vw;
+  height: 90vh;
+  z-index: 999;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background: var(--dark);
+  box-shadow: 0 0 4rem rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  border-radius: 5px;
+}
+
+.signin-dialog-root-appear {
+  opacity: 1;
+}
+
+.signin-dialog-root>div {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+}
+
+.signin-title {
+  background: var(--dark-but-not-too-much);
+  top: 10%;
+  height: 15%;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.signin-options {
+  bottom: 10%;
+  display: flex;
+  height: 55%;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 5%;
+}
+
+.signin-option {
+  background: var(--dark-but-not-too-much);
+  padding: 3rem 2rem;
+  height: 100%;
+  width: 50%;
+  flex-grow: 1;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.signin-option>button {
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  padding: 1.3rem;
+  font-size: 2rem;
+}

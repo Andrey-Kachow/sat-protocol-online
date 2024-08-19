@@ -1,0 +1,74 @@
+table.admin-blue-table {
+  border: 1px solid #1C6EA4;
+  background-color: #e5dff8;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  color: #04141e;
+  text-align: center;
+}
+
+table.admin-blue-table td,
+table.admin-blue-table th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+table.admin-blue-table tbody td {
+  font-size: 13px;
+}
+
+table.admin-blue-table tr:nth-child(even) {
+  background: #b9c2f2;
+}
+
+table.admin-blue-table thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+
+table.admin-blue-table thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+
+table.admin-blue-table thead th:first-child {
+  border-left: none;
+}
+
+table.admin-blue-table tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+
+table.admin-blue-table tfoot td {
+  font-size: 14px;
+}
+
+table.admin-blue-table tfoot .links {
+  text-align: right;
+}
+
+table.admin-blue-table tfoot .links a {
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.admin-logs-wrapper {
+  background-color: #1f4763;
+  padding: 1rem;
+}

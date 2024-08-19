@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+    {% endblock %}
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='flaskr_supplement.css') }}"> -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    {% block style %}{% endblock %}
+    {% block script %}{% endblock %}
+  </head>
+
+  <body>
+    <header>
+      {% block header %}
+      {% endblock %}
+      <div class="admin-debug">
+        {% include 'includes/debug/show_session.html' %}
+      </div>
+    </header>
+    <nav>
+      <a href="{{ url_for('admin.dashboard') }}">
+        <div class="base-title-holder">
+          <h1>Admin Dashboard</h1>
+        </div>
+      </a>
+      <a href="{{ url_for('admin.logs', logtype='access') }}">
+        <div class="base-title-holder">
+          <h1>Logs</h1>
+        </div>
+      </a>
+      <a href="{{ url_for('admin.exit') }}">
+        <div class="base-title-holder">
+          <h1>Exit</h1>
+        </div>
+      </a>
+    </nav>
+    <div class="base-content-wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer>
+      {% block footer %}
+      {% endblock %}
+    </footer>
+  </body>
+
+</html>
